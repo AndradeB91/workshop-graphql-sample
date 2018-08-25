@@ -1,5 +1,5 @@
 import { makeExecutableSchema } from "graphql-tools";
-import resolvers from './resolvers';
+import resolvers from "./resolvers";
 
 const type = `
   type Vaccine {
@@ -40,11 +40,6 @@ const schema = `
 `;
 
 export default makeExecutableSchema({
-  typeDefs: [
-    type,
-    schema, 
-    rootQuery,
-    mutation,
-  ],
-  resolvers,
+  typeDefs: [type, schema, rootQuery, mutation],
+  resolvers
 });

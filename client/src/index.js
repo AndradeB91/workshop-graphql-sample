@@ -1,10 +1,10 @@
 import React from "react";
-import ReactDOM from 'react-dom';
-import { HashRouter, Switch, Route } from 'react-router-dom';
-import Home from './pages/home';
-import AddVaccine from './pages/addVaccine';
-import { ApolloProvider } from 'react-apollo';
-import client from './apolloClient';
+import ReactDOM from "react-dom";
+import { HashRouter, Switch, Route } from "react-router-dom";
+import Home from "./pages/home";
+import AddVaccine from "./pages/addVaccine";
+import { ApolloProvider } from "react-apollo";
+import client from "./apolloClient";
 
 const App = () => {
   return (
@@ -17,6 +17,6 @@ const App = () => {
       </HashRouter>
     </ApolloProvider>
   );
-}
+};
 
-ReactDOM.render(<App />, document.getElementById('App'))
+ReactDOM.render(<App />, document.getElementById("App"));
