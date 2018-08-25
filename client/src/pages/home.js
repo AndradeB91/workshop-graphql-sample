@@ -17,8 +17,8 @@ class Home extends React.PureComponent{
         <div> Lista </div>
         <ul>{
           getAllVaccines.map(vaccine => {
-            const { id, title, description } = vaccine;
-            return <li key={id}>{title} - {description}</li>
+            const { id, title, description, doseType } = vaccine;
+            return <li key={id}>{title} - {description} - {doseType}</li>
           })
         }</ul>
       </Fragment>
@@ -26,9 +26,11 @@ class Home extends React.PureComponent{
   }
 
   render() {
-    const { vaccines } = this.props;
+    const { vaccines: { loading } } = this.props;
     return (
-      (vaccines.loading) ? this.renderLoading() : this.renderVaccinesList()
+      loading ? 
+      this.renderLoading() : 
+      this.renderVaccinesList()
     )
   }
 };

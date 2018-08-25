@@ -6,6 +6,7 @@ const getAllVaccines = gql`
       id,
       title,
       description,
+      doseType,
     }
   }
 `;
