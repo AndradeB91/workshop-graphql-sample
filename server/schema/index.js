@@ -6,7 +6,7 @@ const type = `
     id: ID!
     title: String!
     description: String!
-    doseType: DoseType!
+    doseType: DoseType
   }
 
   enum DoseType {
