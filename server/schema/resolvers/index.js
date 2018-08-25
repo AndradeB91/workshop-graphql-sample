@@ -1,3 +1,4 @@
+import { getVaccineByTitle, getVaccineById, getAllVaccines, addVaccine } from './vaccine';
 const resolvers = {
   DoseType: {
     unique: 1,
@@ -7,14 +8,12 @@ const resolvers = {
     five: 5,
   },
   Query: {
-    getVaccineById: (parent, { id }) => {
-      return {
-        id: 1,
-        title: 'teste',
-        description: 'teste',
-        doseType: 1,
-      }
-    }     
+    getAllVaccines,
+    getVaccineById,
+    getVaccineByTitle    
+  },
+  Mutation: {
+    addVaccine,
   }
 }
 

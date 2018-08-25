@@ -20,13 +20,15 @@ const type = `
 
 const rootQuery = `
   type Query {
-    getVaccineById(id: ID!): Vaccine
+    getVaccineById(id: ID!): Vaccine,
+    getVaccineByTitle(title: String!): [Vaccine],
+    getAllVaccines: [Vaccine],
   }
 `;
 
 const mutation = `
   type Mutation {
-    addVaccine(title: String!, description: String!): Boolean
+    addVaccine(title: String!, description: String!, doseType: DoseType!): Boolean
   }
 `;
 
